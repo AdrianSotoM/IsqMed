@@ -11,7 +11,7 @@ pacman::p_load(dplyr,tidyr,ggstatsplot,readxl,tableone,easystats,
                patchwork,MASS,see,qqplotr,bootStepAIC,performance,
                rpart,rpart.plot,gtools,broom,lmtest,visdat,report,
                parameters,ggcharts,conflicted,car,rattle,cvms,
-               mlogit,MLmetrics,beepr,chatgpt)
+               mlogit,MLmetrics,beepr,chatgpt,usethis)
 
 #Solving duplicate functions conflicts
 conflict_prefer("select","dplyr")
@@ -77,6 +77,8 @@ missval
 
 f1 <- ggscatterstats(data,bhbmm,histo)
 f1
+###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
+use_github(protocol="https",auth_token=Sys.getenv("GITHUB_PAT"))
 
 data %>%
   gpt_do("give me a scatter plot of histo by bhbmm with a regression line
