@@ -11,7 +11,7 @@ pacman::p_load(dplyr,tidyr,ggstatsplot,readxl,tableone,easystats,
                patchwork,MASS,see,qqplotr,bootStepAIC,performance,
                rpart,rpart.plot,gtools,broom,lmtest,visdat,report,
                parameters,ggcharts,conflicted,car,rattle,cvms,
-               mlogit,MLmetrics,beepr,chatgpt,usethis)
+               mlogit,MLmetrics,chatgpt,usethis)
 
 #Solving duplicate functions conflicts
 conflict_prefer("select","dplyr")
@@ -62,8 +62,6 @@ gpt_do <- function(data, prompt) {
   return(res)
 }
 
-# Set your OpenAI API key here
-Sys.setenv(OPENAI_API_KEY = " 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")
 
 #Data upload
 data <- read_excel("data.xlsx")
@@ -77,8 +75,6 @@ missval
 
 f1 <- ggscatterstats(data,bhbmm,histo)
 f1
-###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
-use_github(protocol="https",auth_token=Sys.getenv("GITHUB_PAT"))
 
 data %>%
   gpt_do("give me a scatter plot of histo by bhbmm with a regression line
