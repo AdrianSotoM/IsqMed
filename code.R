@@ -77,6 +77,7 @@ missval
 
 f1 <- ggscatterstats(data,bhbmm,histo)
 f1
+
 ###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
 use_github(protocol="https",auth_token=Sys.getenv("GITHUB_PAT"))
 
