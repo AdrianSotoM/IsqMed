@@ -55,6 +55,7 @@ gpt_do <- function(data, prompt) {
                        "Return only the code, do not comment or explain.",
                        sep = "\n")
   
+  
   gpt_code <- chatgpt::ask_chatgpt(gpt_prompt)
   cat(gpt_code)
   
